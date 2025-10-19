@@ -1,0 +1,57 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+  color: #111;
+}
+
+/* Content wrapper spacing */
+main > .container {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+/* HERO (Home only) */
+.hero {
+  position: relative;
+  width: 100%;
+  height: min(60vh, 600px);
+  background-image: url("https://images.unsplash.com/photo-1520975922284-8b456906c813?q=80&w=2000&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+
+.hero::after {
+  /* Subtle dark overlay for readability */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.35));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.heroContent h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 5vw, 56px);
+  letter-spacing: 1.5px;
+}
+.heroContent p {
+  margin: 0;
+  font-size: clamp(14px, 2vw, 18px);
+  opacity: 0.95;
+}
