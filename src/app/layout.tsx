@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import ClientHeader from "../components/header/ClientHeader";
+import { Playfair_Display, Montserrat } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font-playfair",
+});
 
 export const metadata: Metadata = {
   title: "Old & Gold - Vintage Shopping",
@@ -9,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={playfair.className}>
       <body>
         <ClientHeader />
         <main>{children}</main>

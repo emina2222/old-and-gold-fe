@@ -6,8 +6,15 @@ html {
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-  color: #111;
+  color: #3C3C3C;
+  background-color: #FAF3E0;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0 0 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 50;
 }
 
 /* Content wrapper spacing */
@@ -22,7 +29,6 @@ main > .container {
   position: relative;
   width: 100%;
   height: min(60vh, 600px);
-  background-image: url("https://images.unsplash.com/photo-1520975922284-8b456906c813?q=80&w=2000&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
   display: grid;
@@ -34,7 +40,7 @@ main > .container {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.35));
+  background-color: #D9C6A5;
 }
 
 .heroContent {
@@ -49,9 +55,12 @@ main > .container {
   margin: 0 0 8px;
   font-size: clamp(28px, 5vw, 56px);
   letter-spacing: 1.5px;
+  color: #76323F;
 }
 .heroContent p {
   margin: 0;
   font-size: clamp(14px, 2vw, 18px);
   opacity: 0.95;
+  font-style: italic;
+  color: #3C3C3C;
 }

@@ -78,7 +78,9 @@ export default function Header({ mode }: HeaderProps) {
       <div className={styles.headerInner}>
         <div className={styles.brandWrap}>
           <a href="/" className={styles.logoLink} aria-label="Home">
-            <span className={styles.logoMark}>M</span>
+            <span className={styles.logoMark}>
+              <img src="/logo.png" alt="Logo" className={styles.logoMark} />
+              </span>
           </a>
         </div>
 
