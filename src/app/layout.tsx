@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import ClientHeader from "../components/header/ClientHeader";
-import { Playfair_Display, Montserrat } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  weight: ["400"],
   variable: "--font-playfair",
 });
 

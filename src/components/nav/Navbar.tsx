@@ -18,7 +18,6 @@ export default function Navbar() {
     "/about": null,
     "/contact": null,
   });
-  const [indicator, setIndicator] = React.useState<{ x: number; w: number }>({ x: 0, w: 0 });
 
   // Close on outside click
   React.useEffect(() => {
