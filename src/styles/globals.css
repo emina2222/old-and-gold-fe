@@ -1,10 +1,17 @@
-
 html {
   scroll-behavior: smooth;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: #3C3C3C;
   background-color: #FAF3E0;
@@ -15,52 +22,4 @@ p {
   margin: 0 0 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 50;
-}
-
-/* Content wrapper spacing */
-main > .container {
-  max-width: 1200px;
-  margin: 24px auto;
-  padding: 0 24px;
-}
-
-/* HERO (Home only) */
-.hero {
-  position: relative;
-  width: 100%;
-  height: min(60vh, 600px);
-  background-size: cover;
-  background-position: center;
-  display: grid;
-  place-items: center;
-}
-
-.hero::after {
-  /* Subtle dark overlay for readability */
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #D9C6A5;
-}
-
-.heroContent {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  padding: 0 16px;
-}
-
-.heroContent h1 {
-  margin: 0 0 8px;
-  font-size: clamp(28px, 5vw, 56px);
-  letter-spacing: 1.5px;
-  color: #76323F;
-}
-.heroContent p {
-  margin: 0;
-  font-size: clamp(14px, 2vw, 18px);
-  opacity: 0.95;
-  font-style: italic;
-  color: #3C3C3C;
 }

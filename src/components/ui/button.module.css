@@ -1,0 +1,24 @@
+.visitCatalogBtn {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 12;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #D4A59A, #8B5E5A);
+  color: #F9F4EF;
+  border-radius: 8;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+  transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+              box-shadow 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+              background 0.4s ease-in-out;
+  letter-spacing: .3px;
+  cursor: pointer;
+}
+
+.visitCatalogBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90deg, #E2B8A0, #9B6B61);
+}

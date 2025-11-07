@@ -1,0 +1,144 @@
+/* HERO (Home only) */
+.hero {
+    position: relative;
+    width: 100%;
+    height: min(60vh, 600px);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+.hero::after {
+    /* Subtle dark overlay for readability */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #D9C6A5;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.heroContent h1 {
+    margin: 0 0 8px;
+    font-size: clamp(28px, 5vw, 56px);
+    letter-spacing: 1.5px;
+    color: #76323F;
+}
+
+.heroContent p {
+    margin: 0;
+    font-size: clamp(14px, 2vw, 18px);
+    opacity: 0.95;
+    font-style: italic;
+    color: #3C3C3C;
+}
+
+:root {
+    --bg: #ffffff;
+    --ink: #1f2328;
+    --muted: #5b6068;
+    --card: #f7f7f9;
+    --accent-1: #E2B8A0;
+    /* matches your vintage vibe */
+    --accent-2: #9B6B61;
+    --radius: 14px;
+    --shadow: 0 6px 20px rgba(0, 0, 0, .08);
+}
+
+/* Content wrapper spacing */
+main>.container {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+.container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding: 24px clamp(16px, 3vw, 32px);
+}
+
+.splitCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(16px, 2.5vw, 28px);
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+}
+
+/* attention stripe */
+.splitCard::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+}
+
+.reverse {}
+
+@media (min-width: 760px) {
+    .splitCard {
+        grid-template-columns: 1.05fr .95fr;
+        gap: clamp(20px, 3vw, 36px);
+    }
+
+    .reverse .media {
+        order: -1;
+    }
+}
+
+.copy {
+    display: grid;
+    align-content: center;
+    gap: clamp(10px, 1.5vw, 16px);
+    color: var(--ink);
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.copy h2 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.15;
+    font-size: clamp(1.4rem, 1.2rem + 1.2vw, 2.2rem);
+}
+
+.copy p {
+    margin: 0;
+    line-height: 1.65;
+    color: var(--muted);
+    font-size: clamp(.95rem, .9rem + .3vw, 1.05rem);
+}
+
+.media img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .splitCard {
+        transition: none;
+    }
+}

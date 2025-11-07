@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import ClientHeader from "../components/header/ClientHeader";
 import { Playfair_Display } from "next/font/google";
+import { Footer } from "@/components/footer/Footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ClientHeader />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
