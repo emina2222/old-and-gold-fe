@@ -1,5 +1,6 @@
 import { VisitCatalogButton } from "@/components/ui/VisitCatalogButton";
 import style from './home.module.css';
+import { SubscribeSection } from "@/components/ui/SubscribeSection";
 
 export default function HomePage() {
   return (
@@ -53,6 +54,8 @@ export default function HomePage() {
           </div>
         </article>
       </section>
+
+      <SubscribeSection />
     </>
   );
 }
