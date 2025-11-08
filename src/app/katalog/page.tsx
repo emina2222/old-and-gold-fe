@@ -2,7 +2,7 @@ export default function Catalog() {
   const items = [{ id: "p1", title: "Vintage Lamp", price: 120 }];
   return (
     <section className="grid gap-6">
-      <h1 className="text-2xl font-semibold">Catalog</h1>
+      <h1 className="text-2xl font-semibold">Katalog</h1>
       <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {items.map(i => (
           <li key={i.id} className="rounded-2xl border p-4">

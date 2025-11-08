@@ -43,7 +43,27 @@
     cursor: pointer;
 }
 
-.promotionBtn {
-  background: linear-gradient(90deg, #D4A59A, #8B5E5A);
+.contactBtn {
+  background: linear-gradient(90deg, #d4a59a, #8b5e5a) !important;
+  color: #fff !important;
+  text-transform: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 0.9rem;
+}
 
+.contactBtn:hover {
+  background: linear-gradient(90deg, #c38c81, #754944) !important;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.contactBtn:disabled,
+.contactBtn.Mui-disabled {
+  opacity: 0.6;
+  background: linear-gradient(90deg, #d4a59a, #8b5e5a) !important;
+  cursor: not-allowed;
 }
