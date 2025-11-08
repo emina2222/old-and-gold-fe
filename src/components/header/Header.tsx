@@ -78,13 +78,13 @@ export default function Header({ mode }: HeaderProps) {
         <div className={styles.brandWrap}>
           <a href="/" className={styles.logoLink} aria-label="Home">
             <span className={styles.logoMark}>
-              <img src="/logo.png" alt="Logo" className={styles.logoMark} />
+              <img src="images/logo.png" alt="Logo" className={styles.logoMark} />
               </span>
           </a>
         </div>
 
         <div className={`${styles.heroTitle} ${titleVisible ? styles.heroTitleVisible : ""}`}>
-          Old & Gold
+          <h4>Old & Gold</h4>
         </div>
 
         <div className={styles.navWrapper}>

@@ -11,14 +11,6 @@ export default function Navbar() {
   const panelRef = React.useRef<HTMLDivElement | null>(null);
   const btnRef = React.useRef<HTMLButtonElement | null>(null);
 
-  // --- Animated indicator refs/state ---
-  const navRef = React.useRef<HTMLElement | null>(null);
-  const linkRefs = React.useRef<Record<string, HTMLAnchorElement | null>>({
-    "/collections": null,
-    "/about": null,
-    "/contact": null,
-  });
-
   // Close on outside click
   React.useEffect(() => {
     if (!open) return;
@@ -59,8 +51,7 @@ export default function Navbar() {
     <div className={styles.shell}>
       {/* Desktop links */}
       <nav className={styles.navDesktop} aria-label="Primary">
-        <Link className={`${styles.link} ${isActive("/novo") ? styles.active : ""}`} href="/novo">Novo</Link>
-        <Link className={`${styles.link} ${isActive("/polovno") ? styles.active : ""}`} href="/polovno">Polovno</Link>
+        <Link className={`${styles.link} ${isActive("/katalog") ? styles.active : ""}`} href="/katalog">Katalog</Link>
         <Link className={`${styles.link} ${isActive("/o-nama") ? styles.active : ""}`} href="/o-nama">O nama</Link>
         <Link className={`${styles.link} ${isActive("/kontakt") ? styles.active : ""}`} href="/kontakt">Kontakt</Link>
       </nav>
@@ -89,11 +80,8 @@ export default function Navbar() {
         aria-modal="true"
       >
         <div className={styles.panelInner}>
-          <Link className={styles.panelLink} href="/novo" onClick={() => setOpen(false)}>
-            Novo
-          </Link>
-          <Link className={styles.panelLink} href="/polovno" onClick={() => setOpen(false)}>
-            Polovno
+          <Link className={styles.panelLink} href="/katalog" onClick={() => setOpen(false)}>
+            Katalog
           </Link>
           <Link className={styles.panelLink} href="/o-nama" onClick={() => setOpen(false)}>
             O nama

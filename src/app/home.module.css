@@ -75,7 +75,7 @@ main>.container {
     padding: clamp(16px, 2.5vw, 28px);
     position: relative;
     isolation: isolate;
-    overflow: clip;
+    overflow: hidden;
 }
 
 /* attention stripe */

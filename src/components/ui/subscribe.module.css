@@ -1,4 +1,3 @@
-/* Newsletter Section */
 .ctaSection {
     position: relative;
     background: linear-gradient(135deg, rgba(255, 243, 230, 0.8), rgba(255, 255, 255, 0.9));
@@ -58,27 +57,6 @@
     line-height: 1.6;
 }
 
-/* CTA button */
-.ctaButton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-    color: #fff;
-    padding: 0.7rem 1.4rem;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.ctaButton:hover,
-.ctaButton:focus-visible {
-    transform: translateY(-3px);
-    outline: none;
-    cursor: pointer;
-}
-
 /* subtle entry animation */
 @keyframes fadeUp {
     from {
@@ -99,101 +77,3 @@
 .ctaContent>*:nth-child(2) {
     animation-delay: 0.1s;
 }
-
-/* wrapper that expands/collapses */
-.ctaFormWrap {
-  max-height: 0;
-  overflow: clip;
-  transition: max-height 0.35s ease, opacity 0.25s ease;
-  opacity: 0;
-}
-
-.open {
-  max-height: 600px; /* big enough to reveal the form */
-  opacity: 1;
-}
-
-/* form layout */
-.ctaForm {
-  margin-top: 1rem;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(6px);
-  border-radius: calc(var(--radius) - 4px);
-  padding: 1rem;
-  display: grid;
-  gap: 0.9rem;
-}
-
-@media (min-width: 680px) {
-  .ctaForm {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem 1.25rem;
-  }
-  .ctaForm .actions { grid-column: 1 / -1; }
-  .ctaForm fieldset { grid-column: 1 / -1; }
-}
-
-/* fields */
-.formRow {
-  display: grid;
-  gap: 0.45rem;
-}
-
-.formRow label,
-.ctaForm legend {
-  font-weight: 600;
-  color: #2c2c2c;
-  font-size: 0.95rem;
-}
-
-.ctaForm input[type="text"],
-.ctaForm input[type="email"] {
-  width: 100%;
-  padding: 0.65rem 0.8rem;
-  border-radius: 8px;
-  background: #fff;
-  font-size: 0.95rem;
-  transition: border-color .2s ease, box-shadow .2s ease;
-}
-
-.ctaForm input[type="text"]:focus,
-.ctaForm input[type="email"]:focus {
-  outline: none;
-  border-color: color-mix(in oklab, var(--accent-2) 60%, white);
-  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent-1) 20%, transparent);
-}
-
-/* groups */
-.checkItem,
-.radioItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-right: 1rem;
-  user-select: none;
-}
-
-/* actions */
-.actions {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.submitBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.65rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-  color: #fff;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(155, 107, 97, 0.25);
-  transition: transform .25s cubic-bezier(.25,.1,.25,1), box-shadow .25s cubic-bezier(.25,.1,.25,1);
-}
-
-.submitBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(155,107,97,.35); }
-.submitBtn:active { transform: translateY(0); }
-
