@@ -1,0 +1,302 @@
+.pageRoot {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Main vintage card */
+.aboutCard {
+  background: linear-gradient(135deg, rgba(255, 243, 230, 0.8), rgba(255, 255, 255, 0.9));
+  border-radius: 16px;
+  padding: 2.5rem 2.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 11, 6, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inner decorative frame */
+.aboutCard::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+}
+
+/* Content sits above ornament */
+.aboutInner {
+  position: relative;
+}
+
+/* Hero / header section */
+.heroHeader {
+  margin-bottom: 2.25rem;
+}
+
+.heroOverline {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 0.4rem;
+}
+
+.heroTitle {
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin: 0;
+  color: #7D7461;
+}
+
+.heroSubtitle {
+  margin-top: 0.9rem;
+  max-width: 32rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Layout sections */
+.aboutLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+  gap: 2.75rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Left: story / text */
+.storyBlockTitle {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.storyText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 0.9rem;
+}
+
+.storyText strong {
+  font-weight: 600;
+}
+
+/* Right: “Facts” panel */
+.factsCard {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.factsTitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.8rem;
+}
+
+.factsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.factsItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.factsBullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 0.35rem;
+  background: linear-gradient(90deg, #d4a59a, #8b5e5a);
+}
+
+.factsText {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+/* Values section */
+.valuesSection {
+  margin-top: 1.5rem;
+}
+
+.valuesLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 0.9rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.valueCard {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+.valueTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.valueText {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* Small “signature” */
+.signature {
+  margin-top: 2.25rem;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.signatureLine {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  margin-top: 0.35rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .aboutCard {
+    padding: 2rem 1.9rem;
+  }
+
+  .aboutCard::before {
+    inset: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .aboutLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .pageRoot {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .aboutCard {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Gallery section */
+.gallerySection {
+  margin-top: 2.5rem;
+}
+
+.galleryTitle {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.gallerySubtitle {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 1.2rem;
+}
+
+/* Responsive grid */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.galleryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f3e6d9;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: sepia(0.25) contrast(1.02) saturate(0.9);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.04);
+  filter: sepia(0.1) contrast(1.05) saturate(1);
+}
+
+/* Optional subtle overlay caption */
+.galleryCaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
