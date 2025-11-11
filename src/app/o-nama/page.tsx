@@ -38,7 +38,7 @@ export default function AboutPage() {
 
             {/* Right – small facts card */}
             <aside className={styles.factsCard}>
-              <p className={styles.factsTitle}>Kratke činjenice</p>
+              <p className={styles.factsTitle}>Ukratko</p>
               <ul className={styles.factsList}>
                 <li className={styles.factsItem}>
                   <span className={styles.factsBullet} />
